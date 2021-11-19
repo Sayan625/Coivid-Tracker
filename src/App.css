@@ -1,0 +1,241 @@
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.app{
+    background: rgba(22, 22, 22, 0.8);
+    padding: 20px;
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 1px;
+
+}
+
+.globalIcon i{
+    text-align: center;
+    font-size: 100px;
+    color: rgb(0,255,255);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+.header h3{
+    margin-right: 50px;
+}
+
+.header .flex{
+    margin-bottom: 15px;
+}
+.container{
+    position: relative;
+    display: flex;
+} 
+
+.other{
+    flex: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.countries{
+    height: 150px;
+    overflow-y: scroll;
+}
+
+
+.country{
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgba(22, 22, 22, 0.3);
+
+}
+
+.affected{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.affected h3,p{
+    margin: 0;
+    padding: 0;
+}
+
+.country::before{
+    content: '';
+    position: absolute;
+    background: rgb(0, 225, 255);
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    transition: all 0.35s ease;
+}
+
+.country:hover::before{
+    width: 100%;
+}
+
+.countryName{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+
+.info{
+    margin-top: 10px;
+}
+
+.info img{
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.mapcontainer{
+    flex: 70%;
+    margin-left: 30px;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.map{
+    position: relative;
+    height: 330px;
+}
+
+.map .leaflet-container{
+    height: 100%;
+    width: 100%;
+    
+}
+
+.mapcontainer.card{
+    padding-top: 0;
+    
+}
+.mapcontainer .flex{
+margin-bottom: 3px;
+}
+.mapToggle{
+text-align: end;
+}
+.mapToggle button{
+    padding: 2px 5px;
+    margin: 2px 5px;
+
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.button{
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    margin: 0px 5px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.visible{
+    background: rgba(22, 22, 22, 0.3);
+    border-bottom: none;
+
+
+}
+.mapcontainer .flex{
+    border-bottom: none;
+
+}
+
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1.5px solid rgb(0, 225, 255);
+    margin-bottom: 10px;
+}
+.card{
+    border: 2px solid rgb(0, 225, 255);
+    border-radius: 5px;
+    box-shadow: -1px 5px 20px  rgba(0, 225, 255, 0.7);
+    padding: 20px;
+}
+.white{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+}
+/* loading */
+.loader{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(22, 22, 22, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.loadImg{
+    display: inline-block;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border-top: 5px solid rgb(0, 225, 255);
+    margin-bottom: 10px;
+    animation: 1s spin infinite ease-in-out;
+}
+
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+@media screen and (max-width: 500px){
+
+.header{
+    flex-direction: column;
+}
+.card{
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.container{
+    flex-direction: column;
+}
+
+.mapcontainer{
+flex: 1;
+margin-left: 0px;
+}
+.globalIcon{
+    display: none;
+}
+
+
+}
