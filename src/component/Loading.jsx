@@ -6,6 +6,7 @@ const Loading = () => {
             <div className="loadImg"></div>
         </div>
     )
+    
 }
 
 export default Loading

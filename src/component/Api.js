@@ -8,6 +8,7 @@ export const GetCountry = async (country = '') => {
         formattedData= await rawData.json()
   
     }
+    
     else {
         url = `https://disease.sh/v3/covid-19/countries`
         const rawData = await fetch(url)

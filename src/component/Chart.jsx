@@ -4,6 +4,7 @@ import { Line } from 'react-chartjs-2'
 
 
 const Chart = () => {
+    
     const [chartData, setChartData] = useState([])
 
     useEffect(() => {
